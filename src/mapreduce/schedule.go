@@ -1,7 +1,7 @@
 package mapreduce
 
 import "fmt"
-import "sync"
+
 //
 // schedule() starts and waits for all tasks in the given phase (mapPhase
 // or reducePhase). the mapFiles argument holds the names of the files that
@@ -30,62 +30,5 @@ func schedule(jobName string, mapFiles []string, nReduce int, phase jobPhase, re
 	//
 	// Your code here (Part III, Part IV).
 	//
-	
-	taskid := make(chan int)
-	go func(){
-		for i:=0; i<ntasks; i++{
-			taskid <- i
-		}
-	}()
-
-	successCount := 0
-	var mu sync.Mutex
-	makeTaskArgs := func(taskName string, id int, phase jobPhase) DoTaskArgs{
-		var temp DoTaskArgs
-		temp.JobName = taskName
-		temp.Phase = phase
-		temp.File = mapFiles[id]
-		temp.TaskNumber = id
-		temp.NumOtherPhase = n_other
-		return temp
-	}
-	var wg sync.WaitGroup
-	wg.Add(ntasks)
-	go func(){
-		for{
-			var currrentTask int
-			select{
-			case currrentTask = <-taskid:
-				//do some works
-				//必须使用并发执行，这样worker才能重新被使用
-				go func(){
-					worker := <- registerChan
-					status := call(worker, "Worker.DoTask", makeTaskArgs(jobName, currrentTask, phase), nil)
-					//fmt.Println("one worker has done", status)
-					if status == true{
-						mu.Lock()
-						successCount++
-						wg.Done()
-						go func(){
-							registerChan <- worker
-						}()
-						mu.Unlock()
-					}else{
-						taskid <- currrentTask
-					}
-				}()
-			default:
-
-			
-			}
-			mu.Lock()
-			if(successCount == ntasks){
-				break
-			}
-			mu.Unlock()
-			
-		}
-	}()
-	wg.Wait()
 	fmt.Printf("Schedule: %v done\n", phase)
 }

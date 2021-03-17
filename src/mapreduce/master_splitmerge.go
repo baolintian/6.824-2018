@@ -18,7 +18,6 @@ func (mr *Master) merge() {
 		p := mergeName(mr.jobName, i)
 		fmt.Printf("Merge: read %s\n", p)
 		file, err := os.Open(p)
-		//fmt.Printf("Now we are here\n")
 		if err != nil {
 			log.Fatal("Merge: ", err)
 		}
