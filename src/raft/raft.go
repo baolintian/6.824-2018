@@ -65,6 +65,7 @@ func (rf *Raft) GetState() (int, bool) {
 	var isleader bool
 	// Your code here (2A).
 	return term, isleader
+	
 }
 
 
