@@ -11,3 +11,11 @@ func DPrintf(format string, a ...interface{}) (n int, err error) {
 	}
 	return
 }
+
+type LogEntry struct{
+	LogIndex int
+	LogTerm int
+	command interface{}
+}
+
+
