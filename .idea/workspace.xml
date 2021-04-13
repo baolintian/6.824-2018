@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8bfefe58-734b-4b2e-844d-5ad4372bd689" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/6.824-2018.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/6.824-2018.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kvraft/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kvraft/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kvraft/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kvraft/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/test_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labgob/labgob.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/labgob/labgob.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labgob/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/labgob/test_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labrpc/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/labrpc/test_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linearizability/bitset.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/linearizability/bitset.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linearizability/linearizability.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/linearizability/linearizability.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linearizability/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/linearizability/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/diskvd.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/diskvd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/lockc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/lockc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mr-testout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mr-testout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pbd.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pbd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pg-being_ernest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-being_ernest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pg-grimm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-grimm.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pg-metamorphosis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-metamorphosis.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test-ii.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test-ii.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test-mr.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test-mr.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test-wc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test-wc.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/viewd.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/viewd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/wc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/wc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/common_rpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/common_rpc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/out" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardkv/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardkv/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardkv/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardkv/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/test_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardmaster/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardmaster/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardmaster/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardmaster/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/test_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/channel/buffered.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/channel/buffered.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/channel/producer-consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/channel/producer-consumer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/channel/unbuffered-deadlock.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/channel/unbuffered-deadlock.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/channel/wait.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/channel/wait.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/condvar/chan.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/chan.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/condvar/cond.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/cond.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/condvar/vote-count-1.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/vote-count-1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/condvar/vote-count-2.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/vote-count-2.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/condvar/vote-count-3.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/vote-count-3.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/condvar/vote-count-4.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/vote-count-4.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/electionTimer.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/electionTimer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/go-concurrency.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/test/go-concurrency.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/goroutine/closure.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/goroutine/closure.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/goroutine/loop.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/goroutine/loop.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mutex/bank.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/mutex/bank.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mutex/basic.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/mutex/basic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mutex/per-field.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/mutex/per-field.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test1.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/test1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testAppend.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testAppend.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testChan.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testChan.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testRand.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testRand.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testSet.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testSet.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testTick.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testTick.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testWaitGroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testWaitGroup.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/time/sleep-cancel.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/time/sleep-cancel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/time/sleep.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/time/sleep.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1r6rtXeZsRjeGFJrMIGHfI7WaBL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bfefe58-734b-4b2e-844d-5ad4372bd689" name="Default Changelist" comment="" />
+      <created>1618307595423</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618307595423</updated>
+      <workItem from="1618307596709" duration="2817000" />
+      <workItem from="1618312115508" duration="1071000" />
+      <workItem from="1618313261108" duration="638000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="338" y="72" width="605" height="536" key="find.popup" timestamp="1618313715149">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="338" y="72" width="605" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1618313715149" />
+  </component>
+</project>
