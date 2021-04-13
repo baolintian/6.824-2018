@@ -8,45 +8,76 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/client.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kvraft/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/client.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kvraft/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/common.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kvraft/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kvraft/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kvraft/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/test_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labgob/labgob.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/labgob/labgob.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labgob/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/labgob/test_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labrpc/labrpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/labrpc/labrpc.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labrpc/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/labrpc/test_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/linearizability/bitset.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/linearizability/bitset.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/linearizability/linearizability.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/linearizability/linearizability.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linearizability/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/linearizability/model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/linearizability/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/linearizability/models.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/diskvd.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/diskvd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ii.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/lockc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/lockc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/lockd.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/lockd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mr-challenge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mr-challenge.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/mr-testout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mr-testout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pbc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pbc.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/pbd.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pbd.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/pg-being_ernest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-being_ernest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pg-dorian_gray.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-dorian_gray.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pg-frankenstein.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-frankenstein.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/pg-grimm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-grimm.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pg-huckleberry_finn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-huckleberry_finn.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/pg-metamorphosis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-metamorphosis.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pg-sherlock_holmes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-sherlock_holmes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pg-tom_sawyer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pg-tom_sawyer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test-ii.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test-ii.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test-mr.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test-mr.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test-wc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test-wc.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/viewd.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/viewd.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/wc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/wc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/common_map.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/common_map.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/common_reduce.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/common_reduce.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mapreduce/common_rpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/common_rpc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/master.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/master.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/master_rpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/master_rpc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/master_splitmerge.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/master_splitmerge.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mapreduce/out" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/schedule.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/schedule.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/test_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/worker.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/worker.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raft/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raft/persister.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/persister.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raft/raft.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/raft.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raft/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/test_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raft/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/util.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shardkv/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/client.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shardkv/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/common.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shardkv/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardkv/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shardkv/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/test_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shardmaster/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/client.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shardmaster/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/common.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shardmaster/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shardmaster/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shardmaster/test_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/test_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/channel/buffered.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/channel/buffered.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/channel/producer-consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/channel/producer-consumer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/channel/unbuffered-deadlock.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/channel/unbuffered-deadlock.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/channel/unbuffered.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/channel/unbuffered.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/channel/wait.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/channel/wait.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/condvar/chan.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/chan.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/condvar/cond.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/cond.txt" afterDir="false" />
@@ -54,21 +85,18 @@
       <change beforePath="$PROJECT_DIR$/test/condvar/vote-count-2.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/vote-count-2.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/condvar/vote-count-3.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/vote-count-3.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/condvar/vote-count-4.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/condvar/vote-count-4.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/electionTimer.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/electionTimer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/go-concurrency.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/test/go-concurrency.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/goroutine/bad.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/goroutine/bad.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/goroutine/closure.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/goroutine/closure.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/goroutine/loop.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/goroutine/loop.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mutex/bad.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/mutex/bad.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mutex/bank.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/mutex/bank.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mutex/basic.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/mutex/basic.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mutex/per-field.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/mutex/per-field.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test1.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/test1.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testAppend.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testAppend.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testChan.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testChan.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testRand.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testRand.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/testSet.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testSet.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testTick.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testTick.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/testWaitGroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/testWaitGroup.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/time/sleep-cancel.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/time/sleep-cancel.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/time/sleep.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/time/sleep.go" afterDir="false" />
