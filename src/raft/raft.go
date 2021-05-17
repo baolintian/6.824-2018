@@ -301,7 +301,7 @@ func (rf *Raft)requestBeLeader(){
 				voteCount++
 			}else{
 				var replytemp RequestVoteReply
-				fmt.Println("server numbers 1: ", reply.RequestId)
+				//fmt.Println("server numbers 1: ", reply.RequestId)
 				rf.sendRequestVote(reply.RequestId, &req, &replytemp)
 				replyChan <- replytemp
 			}
