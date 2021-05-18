@@ -18,8 +18,11 @@ package raft
 //
 
 import (
+	crand "crypto/rand"
 	"fmt"
 	"labrpc"
+	"log"
+	"math/big"
 	"math/rand"
 	"sync"
 	"time"
@@ -45,7 +48,7 @@ const follower = "follower"
 const master = "master"
 
 const electionTime = time.Millisecond * 1000
-const appendTime = time.Millisecond * 100
+const appendTime = time.Millisecond * 50
 
 type ApplyMsg struct {
 	CommandValid bool
@@ -65,21 +68,11 @@ type Raft struct {
 	// Your data here (2A, 2B, 2C).
 	// Look at the paper's Figure 2 for a description of what
 	// state a Raft server must maintain.
-	currentTerm int
-	votedFor    int
-	log         []LogEntry
-
-	commitIndex int
-	lastApplied int
-
-	nextIndex  []int
-	matchIndex []int
-
-	leaderId int
-
-	state string
-
-	electionTimer *time.Timer
+	currentTerm    int
+	votedFor       int
+	state          string
+	electionTimer  *time.Timer
+	heartbeatTimer *time.Timer
 }
 
 // return currentTerm and whether this server
@@ -144,10 +137,8 @@ func (rf *Raft) readPersist(data []byte) {
 //
 type RequestVoteArgs struct {
 	// Your data here (2A, 2B).
-	Term         int
-	CandidateId  int
-	LastLogIndex int
-	LastLogTerm  int
+	Term        int
+	CandidateId int
 }
 
 //
@@ -162,25 +153,76 @@ type RequestVoteReply struct {
 	RequestId int
 }
 
+type AppendEntryArgs struct {
+	Term     int
+	LeaderId int
+}
+
+type AppendEntryReply struct {
+	Term    int
+	Success bool
+}
+
+func (rf *Raft) resetTimer(d time.Duration, ty int) {
+
+	if ty == 1 {
+		rf.electionTimer.Stop()
+		rf.electionTimer.Reset(d)
+	} else {
+		rf.heartbeatTimer.Stop()
+		rf.heartbeatTimer.Reset(d)
+	}
+}
+
 //
 // example RequestVote RPC handler.
 //
 func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	// Your code here (2A, 2B).
+	//上锁有问题
+	// 不是锁有问题，是生成的时间不是随机数字，，，
+
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
-
-	if rf.votedFor == args.CandidateId {
-		reply.VoteGranted, reply.Term = true, args.Term
-		return
-	}
-
-	if args.Term < rf.currentTerm {
+	if args.Term < rf.currentTerm || (args.Term == rf.currentTerm && rf.votedFor != -1 && rf.votedFor != args.CandidateId) {
 		reply.VoteGranted, reply.Term = false, args.Term
 		return
 	}
+	//fmt.Println("requestVote, ", args.Term, ", ", rf.currentTerm, "")
+	//fmt.Printf("In requestVote: %d -> %d\n", args.CandidateId, rf.me)
+	if args.Term > rf.currentTerm {
+		rf.currentTerm = args.Term
+		rf.stepDown(follower)
+	}
+
+	rf.votedFor = args.CandidateId
+	reply.Term = rf.currentTerm
+	reply.VoteGranted = true
+
+	rf.resetTimer(randDuration(electionTime), 1)
+
 	return
 
+}
+
+func (rf *Raft) AppendEntry(args *AppendEntryArgs, reply *AppendEntryReply) {
+	rf.mu.Lock()
+	defer rf.mu.Unlock()
+
+	if args.Term < rf.currentTerm {
+		reply.Success, reply.Term = false, rf.currentTerm
+		return
+	}
+	if args.Term > rf.currentTerm {
+		rf.currentTerm = args.Term
+
+		rf.stepDown(follower)
+	}
+	//fmt.Printf("In Append: reset electionTimer, %d -> %d\n", args.LeaderId, rf.me)
+	rf.resetTimer(randDuration(electionTime), 1)
+	reply.Success = true
+	reply.Term = rf.currentTerm
+	return
 }
 
 //
@@ -214,8 +256,13 @@ func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 //
 func (rf *Raft) sendRequestVote(server int, args *RequestVoteArgs, reply *RequestVoteReply) bool {
 	reply.RequestId = server
-
 	ok := rf.peers[server].Call("Raft.RequestVote", args, reply)
+	return ok
+}
+
+func (rf *Raft) sendAppendEntry(server int, args *AppendEntryArgs, reply *AppendEntryReply) bool {
+
+	ok := rf.peers[server].Call("Raft.AppendEntry", args, reply)
 	return ok
 }
 
@@ -253,10 +300,28 @@ func (rf *Raft) Kill() {
 	// Your code here, if desired.
 }
 
-func randDuration(minTime time.Duration) time.Duration {
-	rand.Seed(time.Now().Unix())
-	return time.Duration(rand.Int63())%minTime + minTime
+func init() {
+	//labgob.Register(LogEntry{})
+	max := big.NewInt(int64(1) << 62)
+	bigx, _ := crand.Int(crand.Reader, max)
+	seed := bigx.Int64()
+	rand.Seed(seed)
+	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
 }
+
+// generate random time duration that is between minDuration and 2x minDuration
+func randDuration(minDuration time.Duration) time.Duration {
+	// fmt.Println(rand.Int63() % 1000)
+	extra := time.Duration(rand.Int63()) % minDuration
+	return time.Duration(minDuration + extra)
+}
+
+// func randDuration(minTime time.Duration) time.Duration {
+// 	rand.Seed(time.Now().Unix())
+// 	fmt.Println(rand.Int63()%1000, ", ", time.Now().Unix())
+
+// 	return time.Duration(rand.Int63())%minTime + minTime
+// }
 
 func (rf *Raft) requestBeLeader() {
 	if rf.state == "master" {
@@ -264,43 +329,87 @@ func (rf *Raft) requestBeLeader() {
 	}
 
 	rf.currentTerm++
-	voteCount := 0
+	fmt.Printf("ID: %d Increase Term: %d\n", rf.me, rf.currentTerm)
+
+	rf.votedFor = rf.me
+	voteCount := 1
+
 	var req RequestVoteArgs
 	req.Term = rf.currentTerm
 	req.CandidateId = rf.me
 	//req.lastLogTerm = rf.log[len(rf.log)-1].LogTerm
 	//req.lastLogIndex = rf.log[len(rf.log)-1].LogIndex
 
-	replyChan := make(chan RequestVoteReply, len(rf.peers)-1)
 	//fmt.Println("server numbers: ", len(rf.peers))
+	//之前设计一种死循环的轮询方式不对，询问完一遍没有结果，就应该等待超时，进行新一轮的查询
 	for i := 0; i < len(rf.peers); i++ {
 		if i != rf.me {
 			go func(index int) {
 				var reply RequestVoteReply
-
-				rf.sendRequestVote(index, &req, &reply)
-				replyChan <- reply
+				// fmt.Printf("sendrequestvote: %d -> %d\n", rf.me, index)
+				if rf.sendRequestVote(index, &req, &reply) {
+					if reply.VoteGranted {
+						voteCount++
+						if voteCount > len(rf.peers)/2 && rf.state == candidate {
+							fmt.Printf("In term %d: %d get selected\n", rf.currentTerm, rf.me)
+							rf.stepDown(master)
+						}
+					} else {
+						if rf.currentTerm < reply.Term {
+							rf.currentTerm = reply.Term
+							rf.stepDown(follower)
+						}
+					}
+				}
 			}(i)
 		}
 	}
 
-	for voteCount < len(rf.peers)/2 {
-		select {
-		case reply := <-replyChan:
-			if reply.VoteGranted {
-				voteCount++
-			} else {
-				var replytemp RequestVoteReply
-				//fmt.Println("server numbers 1: ", reply.RequestId)
-				rf.sendRequestVote(reply.RequestId, &req, &replytemp)
-				replyChan <- replytemp
-			}
-		}
-	}
+}
 
-	if rf.state == candidate {
-		rf.state = master
-		fmt.Printf("Node %d has been elected as master\n", rf.me)
+func (rf *Raft) stepDown(s string) {
+	if rf.state == s {
+		return
+	}
+	switch s {
+	case follower:
+		rf.votedFor = -1
+		rf.resetTimer(randDuration(electionTime), 1)
+		rf.heartbeatTimer.Stop()
+
+	case master:
+		rf.electionTimer.Stop()
+		// fmt.Println("In stepDown Broadcast")
+		rf.Broadcast()
+		rf.resetTimer(randDuration(appendTime), 2)
+
+	case candidate:
+		rf.requestBeLeader()
+	}
+	rf.state = s
+}
+
+func (rf *Raft) Broadcast() {
+	for i := range rf.peers {
+		if i == rf.me {
+			continue
+		}
+		go func(index int) {
+			rf.mu.Lock()
+			if rf.state != master {
+				rf.mu.Unlock()
+				return
+			}
+			args := AppendEntryArgs{
+				Term:     rf.currentTerm,
+				LeaderId: rf.me,
+			}
+			var reply AppendEntryReply
+			if rf.sendAppendEntry(index, &args, &reply) {
+
+			}
+			rf.mu.Unlock()
+		}(i)
 	}
 }
 
@@ -324,11 +433,9 @@ func Make(peers []*labrpc.ClientEnd, me int,
 
 	// Your initialization code here (2A, 2B, 2C).
 
-	rf.leaderId = -1
 	rf.currentTerm = 0
 	rf.votedFor = -1
-	rf.commitIndex = 0
-	rf.lastApplied = 0
+
 	rf.state = candidate
 
 	// initialize from state persisted before a crash
@@ -336,12 +443,32 @@ func Make(peers []*labrpc.ClientEnd, me int,
 
 	rf.electionTimer = time.NewTimer(randDuration(electionTime))
 
+	rf.heartbeatTimer = time.NewTimer(randDuration(electionTime))
+	rf.heartbeatTimer.Stop()
+
 	go func() {
 		for {
 			select {
 			case <-rf.electionTimer.C:
-				go rf.requestBeLeader()
+				rf.mu.Lock()
+				//fmt.Printf("in electionTimer reset, raft id: %d\n", rf.me)
+				rf.resetTimer(randDuration(electionTime), 1)
+				if rf.state == follower {
+					rf.stepDown(candidate)
+				} else {
+					rf.requestBeLeader()
+				}
+				rf.mu.Unlock()
+			case <-rf.heartbeatTimer.C:
+				rf.mu.Lock()
+				//fmt.Printf("In timeout Broadcast, leader ID: %d\n", rf.me)
+				rf.Broadcast()
+				//rf.heartbeatTimer = time.NewTimer(randDuration(appendTime))
+				rf.resetTimer(randDuration(appendTime), 2)
+
+				rf.mu.Unlock()
 			}
+
 		}
 	}()
 
